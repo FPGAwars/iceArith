@@ -1,38 +1,69 @@
 {
   "version": "1.2",
   "package": {
-    "name": "",
-    "version": "",
-    "description": "",
-    "author": "",
-    "image": ""
+    "name": "Adder-1bit",
+    "version": "0.1",
+    "description": "Adder-1bit: Adder of two operands of 1 bit",
+    "author": "Juan González-Gómez (Obijuan)",
+    "image": "%3Csvg%20width=%22208.285%22%20height=%22208.61%22%20viewBox=%220%200%20195.2669%20195.57218%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20style=%22line-height:125%25%22%3E%3Cpath%20d=%22M115.76%200v79.813h79.508v35.946h-79.509v79.813H79.51V115.76H0V79.813h79.508V0z%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%20fill=%22#00f%22%20font-size=%22311.941%22%20letter-spacing=%220%22%20word-spacing=%220%22%20stroke-width=%224.441%22/%3E%3C/g%3E%3C/svg%3E",
+    "otid": 1618560481898
   },
   "design": {
     "board": "alhambra-ii",
     "graph": {
       "blocks": [
         {
-          "id": "b9d6c3e5-e513-4b53-b9a1-e42cb10e70ef",
-          "type": "basic.info",
+          "id": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7",
+          "type": "basic.input",
           "data": {
-            "info": "# INDEX: IceArith Collection",
-            "readonly": true
+            "name": "a",
+            "clock": false
           },
           "position": {
-            "x": 136,
-            "y": 72
-          },
-          "size": {
-            "width": 408,
-            "height": 40
+            "x": 280,
+            "y": -224
           }
         },
         {
-          "id": "5b1d6787-fcb1-42ae-b559-013401deb197",
+          "id": "4e8afe74-8f38-4873-97ee-f7585d99a4aa",
+          "type": "basic.output",
+          "data": {
+            "name": "c"
+          },
+          "position": {
+            "x": 616,
+            "y": -176
+          }
+        },
+        {
+          "id": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba",
+          "type": "basic.input",
+          "data": {
+            "name": "b",
+            "clock": false
+          },
+          "position": {
+            "x": 280,
+            "y": -152
+          }
+        },
+        {
+          "id": "c7d2d573-b901-420e-a923-6832e5b18e34",
+          "type": "basic.output",
+          "data": {
+            "name": "s"
+          },
+          "position": {
+            "x": 616,
+            "y": -96
+          }
+        },
+        {
+          "id": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
           "type": "ad119ba8cc72b122da03cd3d251ffce5e8dc6e9a",
           "position": {
-            "x": 168,
-            "y": 288
+            "x": 456,
+            "y": -168
           },
           "size": {
             "width": 96,
@@ -40,67 +71,76 @@
           }
         },
         {
-          "id": "efbacc8a-c72f-477c-b4b6-faf7e8f88132",
-          "type": "basic.info",
-          "data": {
-            "info": "AdderC-1bit",
-            "readonly": true
-          },
+          "id": "e80cc244-1751-4524-9f77-734a36b24a88",
+          "type": "d30ca9ee4f35f6cb76d5e5701447fc2b739bc640",
           "position": {
-            "x": 176,
-            "y": 248
-          },
-          "size": {
-            "width": 120,
-            "height": 32
-          }
-        },
-        {
-          "id": "14276c8e-93e1-4785-962c-1b0d6f8dcd36",
-          "type": "basic.info",
-          "data": {
-            "info": "## Adders",
-            "readonly": true
-          },
-          "position": {
-            "x": 144,
-            "y": 176
-          },
-          "size": {
-            "width": 336,
-            "height": 40
-          }
-        },
-        {
-          "id": "4131766d-a0fb-4226-8167-f037ef730c17",
-          "type": "af6724743b4c7229ffea51e6a217dc0a4631449e",
-          "position": {
-            "x": 328,
-            "y": 288
+            "x": 304,
+            "y": -64
           },
           "size": {
             "width": 96,
             "height": 64
           }
-        },
-        {
-          "id": "133c86b2-f617-4169-a6a0-b5498a42dae2",
-          "type": "basic.info",
-          "data": {
-            "info": "Adder-1bit",
-            "readonly": true
-          },
-          "position": {
-            "x": 336,
-            "y": 248
-          },
-          "size": {
-            "width": 120,
-            "height": 32
-          }
         }
       ],
-      "wires": []
+      "wires": [
+        {
+          "source": {
+            "block": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba",
+            "port": "out"
+          },
+          "target": {
+            "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
+            "port": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba"
+          }
+        },
+        {
+          "source": {
+            "block": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7",
+            "port": "out"
+          },
+          "target": {
+            "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
+            "port": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7"
+          },
+          "vertices": [
+            {
+              "x": 400,
+              "y": -168
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "e80cc244-1751-4524-9f77-734a36b24a88",
+            "port": "3d584b0a-29eb-47af-8c43-c0822282ef05"
+          },
+          "target": {
+            "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
+            "port": "5e915366-608a-431a-bf68-8c64fb4c302c"
+          }
+        },
+        {
+          "source": {
+            "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
+            "port": "4e8afe74-8f38-4873-97ee-f7585d99a4aa"
+          },
+          "target": {
+            "block": "4e8afe74-8f38-4873-97ee-f7585d99a4aa",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
+            "port": "c7d2d573-b901-420e-a923-6832e5b18e34"
+          },
+          "target": {
+            "block": "c7d2d573-b901-420e-a923-6832e5b18e34",
+            "port": "in"
+          }
+        }
+      ]
     }
   },
   "dependencies": {
@@ -851,150 +891,6 @@
               },
               "target": {
                 "block": "664caf9e-5f40-4df4-800a-b626af702e62",
-                "port": "in"
-              }
-            }
-          ]
-        }
-      }
-    },
-    "af6724743b4c7229ffea51e6a217dc0a4631449e": {
-      "package": {
-        "name": "Adder-1bit",
-        "version": "0.1",
-        "description": "Adder-1bit: Adder of two operands of 1 bit",
-        "author": "Juan González-Gómez (Obijuan)",
-        "image": "%3Csvg%20width=%22208.285%22%20height=%22208.61%22%20viewBox=%220%200%20195.2669%20195.57218%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20style=%22line-height:125%25%22%3E%3Cpath%20d=%22M115.76%200v79.813h79.508v35.946h-79.509v79.813H79.51V115.76H0V79.813h79.508V0z%22%20style=%22-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%20fill=%22#00f%22%20font-size=%22311.941%22%20letter-spacing=%220%22%20word-spacing=%220%22%20stroke-width=%224.441%22/%3E%3C/g%3E%3C/svg%3E",
-        "otid": 1618560481898
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7",
-              "type": "basic.input",
-              "data": {
-                "name": "a",
-                "clock": false
-              },
-              "position": {
-                "x": 280,
-                "y": -224
-              }
-            },
-            {
-              "id": "4e8afe74-8f38-4873-97ee-f7585d99a4aa",
-              "type": "basic.output",
-              "data": {
-                "name": "c"
-              },
-              "position": {
-                "x": 616,
-                "y": -176
-              }
-            },
-            {
-              "id": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba",
-              "type": "basic.input",
-              "data": {
-                "name": "b",
-                "clock": false
-              },
-              "position": {
-                "x": 280,
-                "y": -152
-              }
-            },
-            {
-              "id": "c7d2d573-b901-420e-a923-6832e5b18e34",
-              "type": "basic.output",
-              "data": {
-                "name": "s"
-              },
-              "position": {
-                "x": 616,
-                "y": -96
-              }
-            },
-            {
-              "id": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
-              "type": "ad119ba8cc72b122da03cd3d251ffce5e8dc6e9a",
-              "position": {
-                "x": 456,
-                "y": -168
-              },
-              "size": {
-                "width": 96,
-                "height": 96
-              }
-            },
-            {
-              "id": "e80cc244-1751-4524-9f77-734a36b24a88",
-              "type": "d30ca9ee4f35f6cb76d5e5701447fc2b739bc640",
-              "position": {
-                "x": 304,
-                "y": -64
-              },
-              "size": {
-                "width": 96,
-                "height": 64
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba",
-                "port": "out"
-              },
-              "target": {
-                "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
-                "port": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba"
-              }
-            },
-            {
-              "source": {
-                "block": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7",
-                "port": "out"
-              },
-              "target": {
-                "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
-                "port": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7"
-              },
-              "vertices": [
-                {
-                  "x": 400,
-                  "y": -168
-                }
-              ]
-            },
-            {
-              "source": {
-                "block": "e80cc244-1751-4524-9f77-734a36b24a88",
-                "port": "3d584b0a-29eb-47af-8c43-c0822282ef05"
-              },
-              "target": {
-                "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
-                "port": "5e915366-608a-431a-bf68-8c64fb4c302c"
-              }
-            },
-            {
-              "source": {
-                "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
-                "port": "4e8afe74-8f38-4873-97ee-f7585d99a4aa"
-              },
-              "target": {
-                "block": "4e8afe74-8f38-4873-97ee-f7585d99a4aa",
-                "port": "in"
-              }
-            },
-            {
-              "source": {
-                "block": "0ef44beb-f4b1-484c-b15a-dc4431241aee",
-                "port": "c7d2d573-b901-420e-a923-6832e5b18e34"
-              },
-              "target": {
-                "block": "c7d2d573-b901-420e-a923-6832e5b18e34",
                 "port": "in"
               }
             }
