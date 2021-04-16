@@ -179,8 +179,9 @@
               "id": "adf3a6ae-71e2-43dd-b504-c2cdbc14dab7",
               "type": "basic.input",
               "data": {
-                "name": "a",
-                "clock": false
+                "name": "",
+                "clock": false,
+                "virtual": false
               },
               "position": {
                 "x": 280,
@@ -202,8 +203,9 @@
               "id": "c25ede2a-5b9b-43af-bd6b-0ac539a135ba",
               "type": "basic.input",
               "data": {
-                "name": "b",
-                "clock": false
+                "name": "",
+                "clock": false,
+                "virtual": false
               },
               "position": {
                 "x": 280,
