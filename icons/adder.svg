@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="208.28464"
+   height="208.60957"
+   viewBox="0 0 195.2669 195.57218"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="adder.svg"
+   inkscape:version="1.1-beta1 (04d65fac4e, 2021-04-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1860"
+     inkscape:window-height="1016"
+     id="namedview8"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.2559337"
+     inkscape:cx="230.5058"
+     inkscape:cy="141.32912"
+     inkscape:window-x="60"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6"
+     inkscape:pagecheckerboard="0" />
+  <g
+     aria-label="+"
+     id="text4"
+     style="font-size:311.941px;line-height:125%;letter-spacing:0;word-spacing:0;stroke-width:4.44069">
+    <path
+       d="M 115.75932,-2.1666288e-4 V 79.812815 h 79.5084 v 35.946325 h -79.5084 v 79.81303 H 79.508366 V 115.75914 H -3.631413e-5 V 79.812815 H 79.508366 V -2.1666288e-4 Z"
+       style="font-weight:700;-inkscape-font-specification:'sans-serif Bold';fill:#0000ff"
+       id="path1090" />
+  </g>
+</svg>
