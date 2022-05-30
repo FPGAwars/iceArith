@@ -1,11 +1,11 @@
 {
   "version": "1.2",
   "package": {
-    "name": "sqrt_Q16_16",
+    "name": "sqrt_Q8_8",
     "version": "0.1",
-    "description": "Square root in Q16.16 format (fixes point), both the input and the output and the remainder.",
+    "description": "Square root in Q8.8 format (fixes point), both the input and the output and the remainder.",
     "author": "Democrito",
-    "image": "%3Csvg%20version=%221%22%20width=%22228.82%22%20height=%22168.688%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Ctext%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%2220.853%22%20y=%22164.718%22%20font-size=%2255.321%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%20font-family=%22Arial%22%20fill=%22green%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%2220.853%22%20y=%22164.718%22%3EQ16.16%3C/tspan%3E%3C/text%3E%3Ctext%20fill=%22red%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%22125.692%22%20y=%2239.137%22%20font-size=%2248.079%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%20transform=%22scale(.88376%201.13152)%22%20stroke-width=%22.869%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%22125.692%22%20y=%2239.137%22%3E(num)%3C/tspan%3E%3C/text%3E%3Ctext%20fill=%22red%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%22-.705%22%20y=%2241.092%22%20font-size=%2254.361%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%20transform=%22scale(.7263%201.37683)%22%20stroke-width=%22.983%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%22-.705%22%20y=%2241.092%22%3ESQRT%3C/tspan%3E%3C/text%3E%3Ctext%20fill=%22navy%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%22-4.079%22%20y=%22109.368%22%20font-size=%2255.321%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%22-4.079%22%20y=%22109.368%22%3EFix%20Point%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+    "image": "%3Csvg%20version=%221%22%20width=%22228.82%22%20height=%22168.688%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Ctext%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%2255.72%22%20y=%22164.718%22%20font-size=%2255.321%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%20font-family=%22Arial%22%20fill=%22green%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%2255.72%22%20y=%22164.718%22%3EQ8.8%3C/tspan%3E%3C/text%3E%3Ctext%20fill=%22red%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%22125.692%22%20y=%2239.137%22%20font-size=%2248.079%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%20transform=%22scale(.88376%201.13152)%22%20stroke-width=%22.869%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%22125.692%22%20y=%2239.137%22%3E(num)%3C/tspan%3E%3C/text%3E%3Ctext%20fill=%22red%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%22-.705%22%20y=%2241.092%22%20font-size=%2254.361%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%20transform=%22scale(.7263%201.37683)%22%20stroke-width=%22.983%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%22-.705%22%20y=%2241.092%22%3ESQRT%3C/tspan%3E%3C/text%3E%3Ctext%20fill=%22navy%22%20font-family=%22Arial%22%20word-spacing=%220%22%20letter-spacing=%220%22%20x=%22-4.079%22%20y=%22109.368%22%20font-size=%2255.321%22%20font-weight=%22700%22%20style=%22line-height:125%25;-inkscape-font-specification:'Arial%20Bold'%22%3E%3Ctspan%20style=%22-inkscape-font-specification:'Arial%20Bold'%22%20x=%22-4.079%22%20y=%22109.368%22%3EFix%20Point%3C/tspan%3E%3C/text%3E%3C/svg%3E"
   },
   "design": {
     "board": "alhambra-ii",
@@ -37,92 +37,12 @@
           }
         },
         {
-          "id": "af6e75ac-3b0b-485d-8a64-ca361ccc1b68",
+          "id": "aab165f8-52b9-4559-b73d-879f7378c69f",
           "type": "basic.output",
           "data": {
             "name": "root",
-            "range": "[31:0]",
+            "range": "[15:0]",
             "pins": [
-              {
-                "index": "31",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "30",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "29",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "28",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "27",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "26",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "25",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "24",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "23",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "22",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "21",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "20",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "19",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "18",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "17",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "16",
-                "name": "",
-                "value": ""
-              },
               {
                 "index": "15",
                 "name": "",
@@ -212,92 +132,12 @@
           }
         },
         {
-          "id": "d09c7776-a937-4594-b077-68b8060cac27",
+          "id": "64f3a425-9eb1-4efa-96ff-00582aa4fc55",
           "type": "basic.input",
           "data": {
             "name": "num",
-            "range": "[31:0]",
+            "range": "[15:0]",
             "pins": [
-              {
-                "index": "31",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "30",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "29",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "28",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "27",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "26",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "25",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "24",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "23",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "22",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "21",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "20",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "19",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "18",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "17",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "16",
-                "name": "",
-                "value": ""
-              },
               {
                 "index": "15",
                 "name": "",
@@ -388,92 +228,12 @@
           }
         },
         {
-          "id": "07145b32-a774-468d-b8d4-c02b06f6b9d9",
+          "id": "0fd0c220-ae02-42f2-b34e-829ccb11b956",
           "type": "basic.output",
           "data": {
             "name": "rem",
-            "range": "[31:0]",
+            "range": "[15:0]",
             "pins": [
-              {
-                "index": "31",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "30",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "29",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "28",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "27",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "26",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "25",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "24",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "23",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "22",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "21",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "20",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "19",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "18",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "17",
-                "name": "",
-                "value": ""
-              },
-              {
-                "index": "16",
-                "name": "",
-                "value": ""
-              },
               {
                 "index": "15",
                 "name": "",
@@ -588,10 +348,59 @@
           }
         },
         {
+          "id": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
+          "type": "basic.code",
+          "data": {
+            "code": "// Project F Library - Square Root (Fixed-Point)\r\n// (C)2021 Will Green, Open source hardware released under the MIT License\r\n// Learn more at https://projectf.io\r\n\r\n    parameter WIDTH=16;  // width of radicand\r\n    parameter FBITS=8;   // fractional bits (for fixed point)\r\n    \r\n    reg [15:0]      root, rem;\r\n    reg             busy, valid;\r\n\r\n    reg [WIDTH-1:0] x, x_next;    // radicand copy\r\n    reg [WIDTH-1:0] q, q_next;    // intermediate root (quotient)\r\n    reg [WIDTH+1:0] ac, ac_next;  // accumulator (2 bits wider)\r\n    reg [WIDTH+1:0] test_res;     // sign test result (2 bits wider)\r\n\r\n    localparam ITER = (WIDTH+FBITS) >> 1;  // iterations are half radicand+fbits width\r\n    reg [$clog2(ITER)-1:0] i;              // iteration counter\r\n\r\n    always @* begin\r\n        test_res = ac - {q, 2'b01};\r\n        if (test_res[WIDTH+1] == 0) begin  // test_res ≥0? (check MSB)\r\n            {ac_next, x_next} = {test_res[WIDTH-1:0], x, 2'b0};\r\n            q_next = {q[WIDTH-2:0], 1'b1};\r\n        end else begin\r\n            {ac_next, x_next} = {ac[WIDTH-1:0], x, 2'b0};\r\n            q_next = q << 1;\r\n        end\r\n    end\r\n\r\n    always @(posedge clk) begin\r\n        if (start) begin\r\n            busy <= 1;\r\n            valid <= 0;\r\n            i <= 0;\r\n            q <= 0;\r\n            {ac, x} <= {{WIDTH{1'b0}}, rad, 2'b0};\r\n        end else if (busy) begin\r\n            if (i == ITER-1) begin  // we're done\r\n                busy <= 0;\r\n                valid <= 1;\r\n                root <= q_next;\r\n                rem <= ac_next[WIDTH+1:2];  // undo final shift\r\n            end else begin  // next iteration\r\n                i <= i + 1;\r\n                x <= x_next;\r\n                ac <= ac_next;\r\n                q <= q_next;\r\n            end\r\n        end\r\n    end",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "rad",
+                  "range": "[15:0]",
+                  "size": 16
+                },
+                {
+                  "name": "start"
+                }
+              ],
+              "out": [
+                {
+                  "name": "busy"
+                },
+                {
+                  "name": "root",
+                  "range": "[15:0]",
+                  "size": 16
+                },
+                {
+                  "name": "rem",
+                  "range": "[15:0]",
+                  "size": 16
+                },
+                {
+                  "name": "valid"
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 56,
+            "y": 16
+          },
+          "size": {
+            "width": 904,
+            "height": 600
+          }
+        },
+        {
           "id": "bae6e9f8-48e3-41a1-841a-aa45316da063",
           "type": "basic.info",
           "data": {
-            "info": "root, 16 bits integer + 16 bits decimals",
+            "info": "root, 8 bits integer + 8 bits decimals",
             "readonly": true
           },
           "position": {
@@ -607,7 +416,7 @@
           "id": "bd853508-bf95-43ff-9319-05700857b402",
           "type": "basic.info",
           "data": {
-            "info": "Remainder, 16 bits integer + 16 bits decimal",
+            "info": "Remainder, 8 bits integer + 8 bits decimal",
             "readonly": true
           },
           "position": {
@@ -639,7 +448,7 @@
           "id": "b29abe12-7599-4e68-84a9-5156a0c069bf",
           "type": "basic.info",
           "data": {
-            "info": "Radicand, 16 bits integer + 16 bits decimal",
+            "info": "Radicand, 8 bits integer + 8 bits decimal",
             "readonly": true
           },
           "position": {
@@ -683,7 +492,7 @@
           "id": "92b63f05-92e2-4132-9b57-35bec45de4d4",
           "type": "basic.info",
           "data": {
-            "info": "## Square root in Q16.16 format, both the input and the output and the remainder.",
+            "info": "## Square root in Q8.8 format, both the input and the output and the remainder.",
             "readonly": true
           },
           "position": {
@@ -691,7 +500,7 @@
             "y": -112
           },
           "size": {
-            "width": 760,
+            "width": 744,
             "height": 32
           }
         },
@@ -699,77 +508,28 @@
           "id": "bdd73ebc-56a6-422d-bbed-3056cfef941a",
           "type": "basic.info",
           "data": {
-            "info": "    Format: D15 D14 D13 D12 D11 D10 D9 D8 D7 D6 D5 D4 D3 D2 D1 D0 . D15 D14 D13 D12 D11 D10 D9 D8 D7 D6 D5 D4 D3 D2 D1 D0",
+            "info": "    Format: D7 D6 D5 D4 D3 D2 D1 D0 . D7 D6 D5 D4 D3 D2 D1 D0",
             "readonly": true
           },
           "position": {
-            "x": 112,
+            "x": 272,
             "y": 632
           },
           "size": {
-            "width": 808,
+            "width": 424,
             "height": 32
           }
         },
         {
-          "id": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
-          "type": "basic.code",
-          "data": {
-            "code": "// Project F Library - Square Root (Fixed-Point)\r\n// (C)2021 Will Green, Open source hardware released under the MIT License\r\n// Learn more at https://projectf.io\r\n\r\n    parameter WIDTH=32;  // width of radicand\r\n    parameter FBITS=16;  // fractional bits (for fixed point)\r\n    \r\n    reg [31:0]      root, rem;\r\n    reg             busy, valid;\r\n\r\n    reg [WIDTH-1:0] x, x_next;    // radicand copy\r\n    reg [WIDTH-1:0] q, q_next;    // intermediate root (quotient)\r\n    reg [WIDTH+1:0] ac, ac_next;  // accumulator (2 bits wider)\r\n    reg [WIDTH+1:0] test_res;     // sign test result (2 bits wider)\r\n\r\n    localparam ITER = (WIDTH+FBITS) >> 1;  // iterations are half radicand+fbits width\r\n    reg [$clog2(ITER)-1:0] i;              // iteration counter\r\n\r\n    always @* begin\r\n        test_res = ac - {q, 2'b01};\r\n        if (test_res[WIDTH+1] == 0) begin  // test_res ≥0? (check MSB)\r\n            {ac_next, x_next} = {test_res[WIDTH-1:0], x, 2'b0};\r\n            q_next = {q[WIDTH-2:0], 1'b1};\r\n        end else begin\r\n            {ac_next, x_next} = {ac[WIDTH-1:0], x, 2'b0};\r\n            q_next = q << 1;\r\n        end\r\n    end\r\n\r\n    always @(posedge clk) begin\r\n        if (start) begin\r\n            busy <= 1;\r\n            valid <= 0;\r\n            i <= 0;\r\n            q <= 0;\r\n            {ac, x} <= {{WIDTH{1'b0}}, rad, 2'b0};\r\n        end else if (busy) begin\r\n            if (i == ITER-1) begin  // we're done\r\n                busy <= 0;\r\n                valid <= 1;\r\n                root <= q_next;\r\n                rem <= ac_next[WIDTH+1:2];  // undo final shift\r\n            end else begin  // next iteration\r\n                i <= i + 1;\r\n                x <= x_next;\r\n                ac <= ac_next;\r\n                q <= q_next;\r\n            end\r\n        end\r\n    end",
-            "params": [],
-            "ports": {
-              "in": [
-                {
-                  "name": "clk"
-                },
-                {
-                  "name": "rad",
-                  "range": "[31:0]",
-                  "size": 32
-                },
-                {
-                  "name": "start"
-                }
-              ],
-              "out": [
-                {
-                  "name": "busy"
-                },
-                {
-                  "name": "root",
-                  "range": "[31:0]",
-                  "size": 32
-                },
-                {
-                  "name": "rem",
-                  "range": "[31:0]",
-                  "size": 32
-                },
-                {
-                  "name": "valid"
-                }
-              ]
-            }
-          },
-          "position": {
-            "x": 56,
-            "y": 16
-          },
-          "size": {
-            "width": 904,
-            "height": 600
-          }
-        },
-        {
-          "id": "6bba170f-1c99-4b53-9a13-8af18b2cad32",
+          "id": "943886df-054d-43b4-9e1b-ec3030626100",
           "type": "basic.info",
           "data": {
             "info": "Examples of use: https://github.com/Democrito/repositorios/tree/master/Maths/sqrt/Fix_Point",
             "readonly": true
           },
           "position": {
-            "x": 1192,
-            "y": -48
+            "x": 1184,
+            "y": -40
           },
           "size": {
             "width": 272,
@@ -790,6 +550,28 @@
         },
         {
           "source": {
+            "block": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
+            "port": "root"
+          },
+          "target": {
+            "block": "aab165f8-52b9-4559-b73d-879f7378c69f",
+            "port": "in"
+          },
+          "size": 16
+        },
+        {
+          "source": {
+            "block": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
+            "port": "rem"
+          },
+          "target": {
+            "block": "0fd0c220-ae02-42f2-b34e-829ccb11b956",
+            "port": "in"
+          },
+          "size": 16
+        },
+        {
+          "source": {
             "block": "55dc2f4f-bff3-4ee8-b090-738709e5b279",
             "port": "out"
           },
@@ -803,6 +585,17 @@
               "y": 32
             }
           ]
+        },
+        {
+          "source": {
+            "block": "64f3a425-9eb1-4efa-96ff-00582aa4fc55",
+            "port": "out"
+          },
+          "target": {
+            "block": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
+            "port": "rad"
+          },
+          "size": 16
         },
         {
           "source": {
@@ -843,39 +636,6 @@
             "block": "529826b6-42da-42a7-affd-c49df8ef20e4",
             "port": "4196184b-4a60-493b-bcc6-c95958483683"
           }
-        },
-        {
-          "source": {
-            "block": "d09c7776-a937-4594-b077-68b8060cac27",
-            "port": "out"
-          },
-          "target": {
-            "block": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
-            "port": "rad"
-          },
-          "size": 32
-        },
-        {
-          "source": {
-            "block": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
-            "port": "rem"
-          },
-          "target": {
-            "block": "07145b32-a774-468d-b8d4-c02b06f6b9d9",
-            "port": "in"
-          },
-          "size": 32
-        },
-        {
-          "source": {
-            "block": "2e0da159-e6e8-4cba-9913-b3c9771dd2d6",
-            "port": "root"
-          },
-          "target": {
-            "block": "af6e75ac-3b0b-485d-8a64-ca361ccc1b68",
-            "port": "in"
-          },
-          "size": 32
         }
       ]
     }
